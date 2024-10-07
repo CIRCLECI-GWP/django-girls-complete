@@ -2,16 +2,19 @@
 
 This repository contains the code that one would eventually have were they to go through the [Django Girls tutorial](https://tutorial.djangogirls.org/en/).
 
-[![CircleCI](https://circleci.com/gh/CIRCLECI-GWP/django_girls_complete.svg?style=svg)](https://circleci.com/gh/CIRCLECI-GWP/django_girls_complete)
-
 ## Differences
 
 Expressing my authorial rights, some things are a bit different from the tutorial:
 
-- A `Log in` and `Log out` links on the page header
-- A `Back` link within the *blog-detail* and *blog-edit* pages
 - A more extensive `.gitignore` file
 - A `.editorconfig` file
+- Docker related files
+  - `.dockerignore`
+  - `docker-compose.yml`
+  - `Dockerfile`
+- `init.sh` - a script to run in the container
+- `LICENSE`
+- `ruff.toml` - a configuration file for ruff (Python linting and formatting)
 
 - Within `mysite/settings.py`,
 
