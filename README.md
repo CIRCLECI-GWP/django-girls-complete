@@ -44,6 +44,14 @@ Now, you are good to go. Your blog is ready.
 python manage.py test
 ```
 
+### CircleCI
+
+First, [install the Circle CLI](https://circleci.com/docs/local-cli/#installation), then run:
+
+```bash
+circleci build build
+```
+
 ### Docker
 
 NB: The app instance will run off the a preset admin user as set in [init.sh](/init.sh).
