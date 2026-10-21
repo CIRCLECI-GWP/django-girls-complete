@@ -26,10 +26,10 @@ Expressing my authorial rights, some things are a bit different from the tutoria
 
 ## Setup
 
-In a python virtual environment, run:
+In a Python 3.12, 3.13, or 3.14 virtual environment, run:
 
 - `pip install -r requirements.txt`
-- `python manage.py migrate blog`
+- `python manage.py migrate`
 - `python manage.py createsuperuser` (to create user that you'll use to log in)
 
 ### Run the application
@@ -44,6 +44,12 @@ Now, you are good to go. Your blog is ready.
 
 ```bash
 python manage.py test
+```
+
+Or run the same tests with pytest (this is what the CircleCI config runs, so it can write a JUnit report):
+
+```bash
+pytest
 ```
 
 ### CircleCI
@@ -70,7 +76,7 @@ Or in detached mode:
 docker compose up -d
 ```
 
-The application will be live at [0.0.0.0:8000](0.0.0.0:8000)
+The application will be live at [http://localhost:8000](http://localhost:8000)
 
 ### Log in/ out
 
