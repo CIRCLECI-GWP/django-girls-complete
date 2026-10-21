@@ -54,10 +54,12 @@ pytest
 
 ### CircleCI
 
-First, [install the Circle CLI](https://circleci.com/docs/local-cli/#installation), then run:
+The pipeline is defined in [`.circleci/config.yml`](.circleci/config.yml). It installs the dependencies, waits for a PostgreSQL service container, runs the tests with pytest, and uploads the JUnit report to CircleCI.
+
+To check the config before you push, [install the CircleCI CLI](https://cli.circleci.com/) and run:
 
 ```bash
-circleci build build
+circleci config validate
 ```
 
 ### Docker
