@@ -1,8 +1,7 @@
-FROM python:3
-ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
+FROM python:3.14-slim
+ENV PYTHONUNBUFFERED=1
 WORKDIR /code
-ADD requirements.txt /code/
+COPY requirements.txt /code/
 RUN pip install -r requirements.txt
-ADD . /code/
-CMD sh init.sh && python3 manage.py runserver 0.0.0.0:8000
+COPY . /code/
+CMD ["sh", "-c", "sh init.sh && exec python3 manage.py runserver 0.0.0.0:8000"]

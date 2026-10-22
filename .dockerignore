@@ -6,3 +6,9 @@ db.sqlite3
 
 # Editor files
 .vscode/
+
+# Local environments, Git metadata and test reports
+venv/
+.venv/
+.git/
+test-results/
